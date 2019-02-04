@@ -126,7 +126,6 @@ public class PFLockScreenFragment extends Fragment {
         mUseFingerPrint = configuration.isUseFingerprint();
         if (!mUseFingerPrint) {
             mFingerprintButton.setVisibility(View.GONE);
-            mDeleteButton.setVisibility(View.VISIBLE);
         }
         mIsCreateMode = mConfiguration.getMode() == PFFLockScreenConfiguration.MODE_CREATE;
 
