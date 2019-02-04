@@ -137,9 +137,9 @@ public class PFLockScreenFragment extends Fragment {
 
         if (mIsCreateMode) {
             mNextButton.setOnClickListener(mOnNextButtonClickListener);
-            mNextButton.setVisible(View.VISIBLE);
+            mNextButton.setVisibility(View.VISIBLE);
         } else {
-            mNextButton.setVisible(View.GONE);
+            mNextButton.setVisibility(View.GONE);
         }
         mCodeView.setCodeLength(mConfiguration.getCodeLength());
     }
