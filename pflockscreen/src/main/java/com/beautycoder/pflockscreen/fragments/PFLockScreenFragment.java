@@ -137,8 +137,9 @@ public class PFLockScreenFragment extends Fragment {
 
         if (mIsCreateMode) {
             mNextButton.setOnClickListener(mOnNextButtonClickListener);
+            mNextButton.setVisible(View.VISIBLE);
         } else {
-            mNextButton.setOnClickListener(null);
+            mNextButton.setVisible(View.GONE);
         }
         mCodeView.setCodeLength(mConfiguration.getCodeLength());
     }
@@ -280,7 +281,7 @@ public class PFLockScreenFragment extends Fragment {
         @Override
         public void onCodeCompleted(String code) {
             if (mIsCreateMode) {
-                mNextButton.setVisibility(View.VISIBLE);
+                mNextButton.setEnabled(true);
                 mCode = code;
                 return;
             }
@@ -316,7 +317,7 @@ public class PFLockScreenFragment extends Fragment {
         @Override
         public void onCodeNotCompleted(String code) {
             if (mIsCreateMode) {
-                mNextButton.setVisibility(View.GONE);
+                mNextButton.setEnabled(false);
                 return;
             }
         }
