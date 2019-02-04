@@ -131,7 +131,6 @@ public class PFLockScreenFragment extends Fragment {
         mIsCreateMode = mConfiguration.getMode() == PFFLockScreenConfiguration.MODE_CREATE;
 
         if (mIsCreateMode) {
-            mLeftButton.setVisibility(View.GONE);
             mFingerprintButton.setVisibility(View.GONE);
         }
 
